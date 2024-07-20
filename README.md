@@ -11,7 +11,11 @@ This personal portfolio website includes:
 - **Contact** 
 - **Download CV:** Option to download our CV
 
-The website is built using HTML, CSS, and a bit of JavaScript.
+This website is built using HTML, CSS, and JavaScript.
+
+## Live Link
+
+You can view the live version of the website [here]([https://ushasree-3.github.io/]).
 
 ## Team Members
 
