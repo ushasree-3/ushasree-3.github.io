@@ -1,16 +1,26 @@
 # Personal Portfolio Website
-This project was developed as part of the Metis Summer Project 2024 at IIT Gandhinagar.
 
-The goal of this project is to build a personal portfolio website to showcase your skills, projects, and resume. The website includes the following sections:
+We have developed this project as part of the Metis Summer Project 2024 at IIT Gandhinagar.
 
-# About Me: 
-Introduction and personal information
-# Projects:
-Detailed descriptions of notable projects
-# Skills: 
-A comprehensive list of technical skills
-# Contact: 
-A form for visitors to get in touch
+## Project Description
 
+This personal portfolio website includes:
+- **About Me** 
+- **Projects** 
+- **Skills**
+- **Contact** 
+- **Download CV:** Option to download our CV
 
-The website is developed using HTML, CSS, and a bit of JavaScript.
+The website is built using HTML, CSS, and a bit of JavaScript.
+
+## Team Members
+
+- Bhanu
+- Rachana
+- Thumma Ushasree
+
+## Acknowledgments
+
+A special thanks to the Metis team for providing this learning opportunity and supporting us throughout the project.
+
+Enjoy exploring our portfolio!
