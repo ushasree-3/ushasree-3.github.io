@@ -1,0 +1,395 @@
+/* Reset default browser margins and paddings, and set box-sizing to border-box for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for anchor links */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Basic styles for the body */
+body{
+    background-color: #fff;
+    color:#000;
+}
+
+/* --------------------------------Header Section---------------------------------------- */
+#header{
+    width:100%;
+    height:100vh; 
+    background-color: #fff;
+    color: #000000;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container styles for padding and alignment */
+.container{
+    padding:10px 20px;
+}
+
+/* Styling for the header navigation bar */
+.head{
+    background-color: #780969;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    position: fixed;  /* Fixed position for header */
+    z-index: 5;  /* Ensure header is above other content */
+}
+
+/* Icon colors in the navigation */
+.head i{
+    color: white;
+}
+/* Navigation bar styling */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #780969;
+}
+
+/* Navigation list item styling */
+nav ul li{
+    display: inline-block;
+    list-style:none;
+    margin: 10px 20px;
+}
+
+/* Navigation link styling */
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    position: relative;
+}
+
+/* Underline effect for navigation links */
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height:3px;
+    background: #fff;
+    position:absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Styling for the download button */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #780969;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the download button */
+.download-button:hover {
+    background-color: #24247eb5;
+}
+
+/* Header text styling */
+.header-text{
+    margin-top: 300px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+/* Header title styling */
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/* Highlight color for header title */
+.header-text h1 span{
+    color: #780969;
+}
+
+/* ---------------------------------------About Section---------------------------------------- */
+#About{
+    padding: 80px 0;
+    color: #000;
+    background-color: #f0e5d8;
+}
+
+/* Flexbox layout for About section */
+.row{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+
+/* About section left column styling (image) */
+.about-col-1{
+    margin-left: 30px;
+    flex-basis: 35%; /* Occupy 35% of container width */
+}
+
+/* Image styling */
+.about-col-1 img{
+    width:80%;
+    border-radius:15px;
+}
+/* About section right column styling (content) */
+.about-col-2{
+    flex-basis: 55%; /* Occupy 55% of container width */
+}
+
+/* Paragraph text styling */
+.text{
+    margin: 30px 0 20px;
+}
+
+/* Sub-title styling */
+.sub-title{
+    padding-top: 20px;
+    color: #780969;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Tab titles styling */
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+/* Tab link styling */
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #3f0f73;
+}
+
+/* Underline effect for active tab links */
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #780969;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* Active tab link styling */
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+/* Tab content styling */
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;    
+}
+
+/* Span styling within tab contents */
+.tab-contents ul li span{
+    color:#b54679;
+    font-size: 17px;
+}
+
+/* Hide inactive tab contents */
+.tab-contents{
+    display: none;
+}
+
+/* Show active tab content */
+.tab-contents.active-tab{
+    display:block;
+}
+
+/* ----------------------Project section------------------------- */
+#Project{
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+/* Flexbox layout for project list */
+.projects-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Individual project card styling */
+.projects-list div{
+    background: #f0e5d8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+/* Hover effect for project cards */
+.projects-list div:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.2);
+}
+
+/* Project card title styling */
+.projects-list h2{
+    color: #780969;
+    margin: 10px 0;
+}
+
+/* Project card text styling */
+.projects-list p{
+    color: #4a4a8e;
+}
+
+/* Project card link styling */
+.projects-list a{
+    text-decoration: none;
+    color: #7b5b9e;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+/* Hover effect for project card links */
+.projects-list a:hover{
+    color: #3f0f73;
+}
+
+/* Project card icon styling */
+.projects-list i{
+    font-size: 50px;
+    color: #780969;
+}
+
+/* -----------------contact---------------- */
+#Contact{
+    padding: 100px 0 0;
+    background-color: white;
+    text-align: center; 
+}
+
+/* Contact list container styling */
+.contact-list{
+    flex-basis: 35%;  
+    background-color: #f0e5d8;
+    padding-bottom: 30px;
+}
+
+/* Contact list paragraph styling */
+.contact-list p{
+    margin-top: 10px;
+}
+
+/* Contact list icon styling */
+.contact-list p i{
+    color: #780969;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Social icons container styling */
+.social-icons{
+    margin-top: 30px;
+}
+
+/* Social icon link styling */
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #780969;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+/* Hover effect for social icons */
+.social-icons a:hover{
+    color: #ff004f;
+    transform:translateY(-5px);
+}
+
+
+/* ------------Responsive adjustments------------ */
+/* Hide mobile menu icons by default */
+nav .fas{
+    display: none;
+}
+
+/* Responsive adjustments for small screens */
+@media only screen and (max-width:600px){
+      
+    .header-text{
+        margin-top:100%;
+        font-size: 16px;
+    } 
+    .header-text h1{
+        font-size: 30px;
+    }
+    /* Show mobile menu icons */
+    nav .fas{
+        display: block;
+        font-size:25px;
+    }
+    nav ul{
+        background: #780969;
+        position: fixed;
+        top: 0;
+        right: -200px; /* Hide menu initially */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    /* Close button positioning */
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    /* Responsive font sizes and layout adjustments */
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+}
