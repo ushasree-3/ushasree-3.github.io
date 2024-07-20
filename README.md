@@ -15,7 +15,7 @@ This website is built using HTML, CSS, and JavaScript.
 
 ## Live Link
 
-You can view the live version of the website [here]([https://ushasree-3.github.io/]).
+You can view the live version of the website [here](https://ushasree-3.github.io/).
 
 ## Team Members
 
