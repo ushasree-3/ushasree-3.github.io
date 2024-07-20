@@ -15,9 +15,9 @@ The website is built using HTML, CSS, and a bit of JavaScript.
 
 ## Team Members
 
-- Bhanu
-- Rachana
 - Thumma Ushasree
+- Repalle Bhanu Roshini
+- Durgam Rachana
 
 ## Acknowledgments
 
