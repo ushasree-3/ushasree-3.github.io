@@ -8,8 +8,10 @@ This personal portfolio website includes:
 - **About Me** 
 - **Projects** 
 - **Skills**
+- **Education**
+- **Achievements**
 - **Contact** 
-- **Download CV:** Option to download our CV
+- **Download CV:** Option to download my CV
 
 This website is built using HTML, CSS, and JavaScript.
 
