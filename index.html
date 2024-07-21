@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="portfolio.png">
+    <!-- Title link -->
+    <title>Personal Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/b9276cef4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- -------------------------------------Header------------------------------------------------------ -->
+<div id="header">
+    <div class="container">
+        <nav class="head">
+            <!-- User icon -->
+            <i class="fa-solid fa-user"></i>
+            <!-- Navigation Menu -->
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <!-- Close menu button -->
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <!-- Open menu button -->
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!-- Header text -->
+        <div class="header-text">
+                <p>Hey there!</p>
+                <h1>I'm <span>Thumma Ushasree</span></h1>
+                <br>
+                <!-- CV download button -->
+                <a href="Resume.pdf" download="Resume.pdf" class="download-button">Download CV</a>
+        </div>
+    </div>
+</div> 
+
+<!-- ------------------------------------About------------------------------------------------------- -->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <!-- About Section Image -->
+            <div class="about-col-1">
+                <img src="my_photo.png" alt="My photo">
+            </div>
+            <!-- About Section Content -->
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p class="text">Hello! I’m Thumma Ushasree, a third-year Computer Science and Engineering student at IIT Gandhinagar.
+                     Passionate about coding, problem-solving, and game development, I’m constantly exploring new technologies to create innovative solutions.
+                      When I’m not immersed in code, you can find me on the volleyball court or playing badminton. 
+                      I believe in balancing academics with physical activities to stay sharp and motivated.</p>
+                <!-- Tab Titles -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!-- Skills tab content -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span></li>
+                        <li><span>Verliog</span></li>
+                        <li><span>Web development (HTML, CSS, JavaScript)</span></li>
+                    </ul>
+                </div>
+                <!-- Experience tab content -->
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>Best Project Award</span><br>Received for the exceptional implementation of the "Two Cars" game on the Basys3 board</li>
+                        <li><span>1st place</span><br>Achieved in the Volleyball Association of Gandhinagar District Championship 2023-24</li>
+                    </ul>
+                </div>
+                <!-- Education tab content -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Present</span><br>IIT Gandhinagar</li>
+                        <li><span>2020-2022</span><br>Narayana Junior College</li>
+                        <li><span>2015-2020</span><br>JNV Rangareddy</li>
+                    </ul>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------Project---------------------------------------------- -->
+<div id="Project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <!-- Project 1 -->
+            <div>
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h2>Strategic Games</h2>
+                <p>Collaborated on refining strategic games like Sim, Connect, and Rubik’s Cube solver. 
+                    Utilized BFS and DFS algorithms to boost performance and enhance user engagement.
+                     The project highlighted my ability to work in a team and tackle complex algorithmic challenges.</p>
+                <a href="https://github.com/ushasree-3/lab-assg1" target="_blank">Learn more</a>    
+            </div>
+            <!-- Project 2 -->
+            <div>
+                <i class="fa-regular fa-address-card"></i>
+                <h2>Personal Portfolio</h2>
+                <p>Built a responsive portfolio website using HTML, CSS, and JavaScript, 
+                    featuring a modern design to display my projects, skills, and achievements. 
+                    The site includes interactive elements for better user experience and a showcase of my web development skills.</p>
+                <a href="https://github.com/ushasree-3/ushasree-3.github.io" target="_blank">Learn more</a>
+            </div>
+            <!-- Project 3 -->
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>"Two Cars" Game on Nexys4</h2>
+                <p>Developed an advanced "Two Cars" game with detailed sprite graphics and smooth VGA output using Verilog.
+                     Integrated start and end screens, achieving original game visuals. This project demonstrated my 
+                     proficiency in FPGA programming and creative problem-solving in game design.</p>
+                <a href="https://github.com/ushasree-3/Gamepad-implementation-on-Nexys4-DDR?tab=readme-ov-file" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------------------------------------Contact-------------------------------------------------------- -->
+<div id="Contact">
+    <div class="container">
+            <div class="contact-list">
+                <h1 class="sub-title">Contact me</h1>
+                <p>You can reach out to me through the following platforms:</p>
+                <!-- Contact email -->
+                <p><i class="fas fa-paper-plane"></i>thumma.ushasree@iitgn.ac.in</p>
+                <!-- Contact phone number
+                <p><i class="fas fa-phone-square alt"></i>+91 1237456985</p> -->
+                <!-- Social media icons -->
+                <div class="social-icons">
+                    <!-- <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a> -->
+                    <a href="https://instagram.com/ushuu_3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="www.linkedin.com/in/thumma-ushasree-88b5b0313" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------Java Script--------------------------------------------------- -->
+<!-- JavaScript for tab functionality -->
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<!-- JavaScript for menu functionality -->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";    
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";    
+    }
+</script>
+</body>
+</html>
