@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/b9276cef4c.js" crossorigin="anonymous"></script>
+    
+    <!-- ========== RUM Implementation ========== -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJRQRJEWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZKJRQRJEWE');
+      
+      // Load Web Vitals for Core Web Vitals tracking
+      import('https://unpkg.com/web-vitals@2.1.0/dist/web-vitals.umd.js')
+        .then(({getCLS, getFID, getLCP}) => {
+          getCLS(metric => gtag('event', 'web_vital', metric));
+          getFID(metric => gtag('event', 'web_vital', metric));
+          getLCP(metric => gtag('event', 'web_vital', metric));
+        });
+    </script>
 </head>
 <body>
 
@@ -23,10 +41,10 @@
             <i class="fa-solid fa-user"></i>
             <!-- Navigation Menu -->
             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Project">Project</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#header" class="nav-link">Home</a></li>
+                <li><a href="#About" class="nav-link">About</a></li>
+                <li><a href="#Project" class="nav-link">Project</a></li>
+                <li><a href="#Contact" class="nav-link">Contact</a></li>
                 <!-- Close menu button -->
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -55,9 +73,9 @@
             <!-- About Section Content -->
             <div class="about-col-2">
                 <h1 class="sub-title">About me</h1>
-                <p class="text">Hello! I’m Thumma Ushasree, a third-year Computer Science and Engineering student at IIT Gandhinagar.
-                     Passionate about coding, problem-solving, and game development, I’m constantly exploring new technologies to create innovative solutions.
-                      When I’m not immersed in code, you can find me on the volleyball court or playing badminton. 
+                <p class="text">Hello! I'm Thumma Ushasree, a third-year Computer Science and Engineering student at IIT Gandhinagar.
+                     Passionate about coding, problem-solving, and game development, I'm constantly exploring new technologies to create innovative solutions.
+                      When I'm not immersed in code, you can find me on the volleyball court or playing badminton. 
                       I believe in balancing academics with physical activities to stay sharp and motivated.</p>
                 <!-- Tab Titles -->
                 <div class="tab-titles">
@@ -102,10 +120,10 @@
             <div>
                 <i class="fa-solid fa-puzzle-piece"></i>
                 <h2>Strategic Games</h2>
-                <p>Collaborated on refining strategic games like Sim, Connect, and Rubik’s Cube solver. 
+                <p>Collaborated on refining strategic games like Sim, Connect, and Rubik's Cube solver. 
                     Utilized BFS and DFS algorithms to boost performance and enhance user engagement.
                      The project highlighted my ability to work in a team and tackle complex algorithmic challenges.</p>
-                <a href="https://github.com/ushasree-3/lab-assg1" target="_blank">Learn more</a>    
+                <a href="https://github.com/ushasree-3/lab-assg1" target="_blank" class="project-link">Learn more</a>    
             </div>
             <!-- Project 2 -->
             <div>
@@ -114,7 +132,7 @@
                 <p>Built a responsive portfolio website using HTML, CSS, and JavaScript, 
                     featuring a modern design to display my projects, skills, and achievements. 
                     The site includes interactive elements for better user experience and a showcase of my web development skills.</p>
-                <a href="https://github.com/ushasree-3/ushasree-3.github.io" target="_blank">Learn more</a>
+                <a href="https://github.com/ushasree-3/ushasree-3.github.io" target="_blank" class="project-link">Learn more</a>
             </div>
             <!-- Project 3 -->
             <div>
@@ -123,7 +141,7 @@
                 <p>Developed an advanced "Two Cars" game with detailed sprite graphics and smooth VGA output using Verilog.
                      Integrated start and end screens, achieving original game visuals. This project demonstrated my 
                      proficiency in FPGA programming and creative problem-solving in game design.</p>
-                <a href="https://github.com/ushasree-3/Gamepad-implementation-on-Nexys4-DDR?tab=readme-ov-file" target="_blank">Learn more</a>
+                <a href="https://github.com/ushasree-3/Gamepad-implementation-on-Nexys4-DDR?tab=readme-ov-file" target="_blank" class="project-link">Learn more</a>
             </div>
         </div>
     </div>
@@ -136,22 +154,18 @@
                 <p>You can reach out to me through the following platforms:</p>
                 <!-- Contact email -->
                 <p><i class="fas fa-paper-plane"></i>thumma.ushasree@iitgn.ac.in</p>
-                <!-- Contact phone number
-                <p><i class="fas fa-phone-square alt"></i>+91 1237456985</p> -->
                 <!-- Social media icons -->
                 <div class="social-icons">
-                    <!-- <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a> -->
-                    <a href="https://instagram.com/ushuu_3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="www.linkedin.com/in/thumma-ushasree-88b5b0313" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/ushuu_3" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/thumma-ushasree-88b5b0313" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
     </div>
 </div>
 
 <!-- ---------------------------------------Java Script--------------------------------------------------- -->
-<!-- JavaScript for tab functionality -->
 <script>
+    // Tab functionality
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
     function opentab(tabname){
@@ -164,9 +178,8 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-</script>
-<!-- JavaScript for menu functionality -->
-<script>
+    
+    // Menu functionality
     var sidemenu = document.getElementById("sidemenu");
     function openmenu(){
         sidemenu.style.right = "0";    
@@ -174,50 +187,49 @@
     function closemenu(){
         sidemenu.style.right = "-200px";    
     }
-</script>
-
-<script>
-// Track clicks on buttons/links
-document.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-    gtag('event', 'user_click', {
-        element_type: e.target.tagName,
-        element_text: e.target.innerText.substring(0, 50) // Truncate long text
-    });
-    }
-});
-</script>
-
-</body>
-
-<!-- Google Analytics + RUM -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJRQRJEWE"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZKJRQRJEWE');
-
-    // Track page performance
-    window.addEventListener('load', function() {
-    if (window.performance) {
-        const timing = performance.timing;
-        gtag('event', 'page_performance', {
-        page_load_time: timing.loadEventEnd - timing.navigationStart,
-        dom_ready_time: timing.domComplete - timing.domLoading,
-        page_path: window.location.pathname
+    
+    // Enhanced RUM Tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track page performance
+        if (window.performance) {
+            const timing = performance.timing;
+            const navStart = timing.navigationStart;
+            
+            setTimeout(() => {
+                gtag('event', 'page_performance', {
+                    page_load: timing.loadEventEnd - navStart,
+                    dom_ready: timing.domComplete - timing.domLoading,
+                    ttfb: timing.responseStart - timing.requestStart,
+                    page_path: location.pathname
+                });
+            }, 1000);
+        }
+        
+        // Track user interactions
+        document.querySelectorAll('a, button, .nav-link, .project-link, .social-link, .download-button').forEach(el => {
+            el.addEventListener('click', function(e) {
+                gtag('event', 'user_interaction', {
+                    element_type: e.target.tagName,
+                    element_id: e.target.id || 'none',
+                    element_class: e.target.className || 'none',
+                    element_text: e.target.innerText.substring(0, 50),
+                    interaction_type: 'click',
+                    page_section: e.target.closest('[id]')?.id || 'unknown'
+                });
+            });
         });
-    }
     });
-
-    // Track errors
-    window.addEventListener('error', (e) => {
-    gtag('event', 'js_error', {
-        error_message: e.message,
-        error_file: e.filename,
-        error_line: e.lineno
-    });
+    
+    // Error tracking
+    window.addEventListener('error', function(e) {
+        gtag('event', 'js_error', {
+            error_message: e.message,
+            error_stack: e.error?.stack,
+            error_file: e.filename,
+            error_line: e.lineno,
+            error_column: e.colno
+        });
     });
 </script>
-
+</body>
 </html>
