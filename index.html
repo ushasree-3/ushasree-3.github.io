@@ -175,5 +175,49 @@
         sidemenu.style.right = "-200px";    
     }
 </script>
+
+<script>
+// Track clicks on buttons/links
+document.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+    gtag('event', 'user_click', {
+        element_type: e.target.tagName,
+        element_text: e.target.innerText.substring(0, 50) // Truncate long text
+    });
+    }
+});
+</script>
+
 </body>
+
+<!-- Google Analytics + RUM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJRQRJEWE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZKJRQRJEWE');
+
+    // Track page performance
+    window.addEventListener('load', function() {
+    if (window.performance) {
+        const timing = performance.timing;
+        gtag('event', 'page_performance', {
+        page_load_time: timing.loadEventEnd - timing.navigationStart,
+        dom_ready_time: timing.domComplete - timing.domLoading,
+        page_path: window.location.pathname
+        });
+    }
+    });
+
+    // Track errors
+    window.addEventListener('error', (e) => {
+    gtag('event', 'js_error', {
+        error_message: e.message,
+        error_file: e.filename,
+        error_line: e.lineno
+    });
+    });
+</script>
+
 </html>
